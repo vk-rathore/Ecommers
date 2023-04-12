@@ -58,7 +58,7 @@ const Payment = ({ history }) => {
         },
       };
       const { data } = await axios.post(
-        "https://ecommerce-by-vishal.onrender.com/api/v1/payment/process",
+        "/api/v1/payment/process",
         paymentData,
         config
       );

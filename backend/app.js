@@ -22,7 +22,9 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "backend/config/config.env" });
 }
 
-app.use(cors())
+app.use(cors({
+  origin:["https://ecommers-f18g.vercel.app/","https://ecommerce-by-vishal.onrender.com/"]
+}))
 
 // parse application/json
 app.use(bodyParser.json())

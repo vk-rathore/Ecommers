@@ -11,12 +11,18 @@ const fileUpload = require("express-fileupload");
 
 const path = require("path");
 
+
+var cors = require('cors')
+
+
 const app=express();
 
 //Config
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "backend/config/config.env" });
 }
+
+app.use(cors())
 
 // parse application/json
 app.use(bodyParser.json())
